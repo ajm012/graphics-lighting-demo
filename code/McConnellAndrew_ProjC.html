@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Andrew McConnell Project C</title>
+  </head>
+  <link rel="stylesheet" href="McConnellAndrew_ProjC.css">
+	
+  <body onload="main()" onresize="drawResize()">
+    <canvas id="webgl" width="300" height="300">
+      Please use a browser that supports "canvas"
+    </canvas>
+
+    <button type="button"
+	    onclick="VBO1toggle()">Blinn-Phong/Gouraud</button>
+    <button type="button"
+	    onclick="VBO4toggle()">Phong/Gourad</button>
+    
+    <button type="button"
+	    onclick="VBO2toggle()">Blinn-Phong/Phong</button>
+    
+    <button type="button" onclick="VBO3toggle()">Phong/Phong</button>
+    <br>
+    
+    Light source location:
+    <div id="light">X=6, Y=5, Z=5</div>
+
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Need Help?</button>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+	<span class="close">&times;</span>
+	<p>CONTROLS:</p>
+	<p>Use the WSAD keys to turn the camera, the arrow keys to
+	move forward/backward/left/right, and the OP keys to move up
+	  and down.</p>
+	<p>Use the M key to cycle through materials, and the keys 1-6
+	to toggle the ambient/diffuse/specular values of the two light
+	  sources on/off.</p>
+	<p>Use the IKJL keys similar to WSAD: I moves the point-source
+	light up (+y), K moves it down, J moves it left (-x), L moves
+	  it right. Y moves it in the -z direction, U in the +z.</p>
+	<p>Enjoy!</p>
+      </div>  
+    </div>
+    
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-quat.js"></script>
+    <script src="McConnellAndrew_VBOBoxes.js"></script>
+    <script src="McConnellAndrew_VBOBox4.js"></script>
+    <script src="McConnellAndrew_VBOBox3.js"></script>
+    <script src="McConnellAndrew_VBOBox2.js"></script>
+    <script src="McConnellAndrew_VBOBox1_gouraud.js"></script>
+    <script src="../lib/materials_Ayerdi.js"></script>
+    <script src="../lib/lights-JT.js"></script>
+    <script src="McConnellAndrew_drawShapes.js"></script>
+    <script src="McConnellAndrew_ProjC.js"></script>
+  </body>
+</html>
